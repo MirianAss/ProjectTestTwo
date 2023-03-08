@@ -28,4 +28,19 @@ class TableViewViewController: UIViewController {
     }
 
 }
+extension TableViewViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayStyles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellXib", for: indexPath) as? CustomCellXib {
+            
+            cell.setupFashion(fasion: arrayStyles[indexPath.row])
+            
+            return cell
+        }
+            return UITableViewCell()
+    }
+}
 
