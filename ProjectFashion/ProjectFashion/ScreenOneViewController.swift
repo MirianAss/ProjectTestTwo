@@ -8,6 +8,8 @@
 import UIKit
 
 class ScreenOneViewController: UIViewController {
+    
+    var screenOne = FashionStyles(title: "", image: "", text: "", style: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,9 +23,9 @@ class CustomCellXib: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupFashion(fasion: FashionStyles) {
-        lblXib.text = fasion.title
-        imageXib.image = UIImage(named: fasion.image)
+    func setupFashion(fashion: FashionStyles) {
+        lblXib.text = fashion.title
+        imageXib.image = UIImage(named: fashion.image)
     }
     
 }
